@@ -1,0 +1,22 @@
+@model ProductType[]
+@{
+    ViewData["Title"] = "Types";
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Select((value, index) => new { index, value }))
+        {
+            <tr class="position-relative">
+                <th scope="row">@(item.index + 1)</th>
+                <td>@item.value.Name<a class="row-link" asp-controller="Subtype" asp-action="Subtypes" asp-route-id="@item.value.Id"></a></td>
+            </tr>
+        }
+    </tbody>
+</table>

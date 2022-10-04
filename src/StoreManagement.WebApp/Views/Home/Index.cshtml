@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="d-flex position-absolute justify-content-center align-items-center h-100 w-100">
+    <div class="d-flex flex-column">
+        <h1 class="display-6 text-center">Login as...</h1>
+        <div class="d-flex justify-content-evenly">
+            <form method="post" asp-controller="Auth" asp-action="Login" class="p-2">
+                <input type="hidden" name="user" value="administrator">
+                <button class="btn btn-primary" type="submit">Manager</button>
+            </form>
+            <form method="post" asp-controller="Auth" asp-action="Login" class="p-2">
+                <input type="hidden" name="user" value="user">
+                <button class="btn btn-primary" type="submit">Customer</button>
+            </form>
+        </div>
+    </div>
+</div>

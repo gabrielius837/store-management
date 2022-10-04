@@ -1,0 +1,10 @@
+global using Xunit;
+global using Moq;
+global using StoreManagement.WebApp;
+global using StoreManagement.WebApp.Controllers;
+global using System.Threading.Tasks;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Mvc.ModelBinding;
+global using System.Security.Claims;
+global using System.Collections.Generic;
